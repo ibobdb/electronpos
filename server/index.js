@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express();
 const cors = require('cors');
-const PORT = 8080;
 const bodyParser = require('body-parser');
 const path = require('path');
 // Middleware untuk mengurai data JSON dan formulir URL-encoded
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+const PORT = process.env.SERVER_PORT;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
