@@ -1,0 +1,25 @@
+{
+  "development": {
+    "host": "sql12.freemysqlhosting.net",
+    "username": "sql12674573",
+    "password": "PDJFS9sIIU",
+    "database": "sql12674573",
+    "port": "3306",
+    "dialect": "mysql",
+    "timezone": "+07:00"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

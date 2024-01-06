@@ -1,0 +1,45 @@
+.bg-primary {
+  background-color: #1cac7c !important;
+}
+
+.btn-primary {
+  background-color: #1cac7c !important;
+  border: none !important;
+  // color: black !important;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.search-dropdown {
+  background-color: white;
+  width: 25%;
+  position: absolute;
+  //   border: 1px solid #1cac7c;
+  border-radius: 10px;
+  z-index: 999;
+  padding: 10px;
+  //   top: 0;
+  li {
+    cursor: pointer;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1cac7c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

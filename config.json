@@ -1,0 +1,14 @@
+{
+  "database": {
+    "host": "127.0.0.1",
+    "username": "root",
+    "password": "root",
+    "database": "apotek_development",
+    "port": "3307",
+    "dialect": "mysql",
+    "timezone": "+07:00"
+  },
+  "printer": {
+    "printer_name": "printer-test"
+  }
+}

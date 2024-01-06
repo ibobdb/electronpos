@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splash Screen</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: white;
+        color: #282c34;
+        transition: 1s ease-in-out;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      img {
+        width: 150px;
+        height: auto;
+        padding: 10px;
+      }
+
+      .content {
+        display: grid;
+      }
+
+      small {
+        padding-left: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <img src="assets/loading.svg" alt="" />
+      <small>Loading...</small>
+    </div>
+  </body>
+</html>

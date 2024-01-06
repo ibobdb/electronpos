@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./components/style/dashboard.css";
+import "./components/style/dashboard";
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import BottomAlert from './components/BottomAlert'
+import Cashier from './pages/cashier'
+// import DatabaseSettings from "./pages/database-settings";
+import DashboardLayout from "./pages/dashboardLayout";
+import 'react-toastify/dist/ReactToastify.css';
+import 'sweetalert2/src/sweetalert2.scss'
+import 'boxicons'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToastContainer />
+      <Routes>
+        <Route path="*" Component={DashboardLayout} />
+        <Route path="/cashier" Component={Cashier} />
+        {/* <Route path="/db-setting" Component={DatabaseSettings} /> */}
+      </Routes>
+      {/* <BottomAlert /> */}
     </div>
   );
 }

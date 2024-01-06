@@ -1,0 +1,37 @@
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th {
+  color: #fff;
+}
+
+.card {
+  border-radius: 0.5rem;
+}
+
+.table-scroll {
+  border-radius: 0.5rem;
+}
+
+.table-primary {
+  tr {
+    th {
+      background-color: #1cac7c !important;
+      color: white !important;
+    }
+  }
+}
+
+thead {
+  top: 0;
+  position: sticky;
+}
+
+.table-responsive {
+  position: relative;
+  // height: 700px;
+}

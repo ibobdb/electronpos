@@ -1,0 +1,41 @@
+.card-cashier {
+  height: 500px;
+}
+
+.card-res {
+  height: 580px;
+}
+
+.dropdown-search-product {
+  min-height: 200px;
+  max-height: 500px;
+  width: 80%;
+  background-color: white !important;
+  position: absolute;
+  z-index: 999;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #1cac7c;
+  overflow-y: auto;
+  small {
+    position: fixed;
+  }
+  li {
+    cursor: pointer;
+  }
+  li:hover {
+    background-color: rgba($color: #1cac7c, $alpha: 0.1);
+    transition: 0.2s ease;
+  }
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.total-font {
+  font-size: 50px;
+  font-weight: bold;
+}
