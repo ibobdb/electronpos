@@ -1,0 +1,11 @@
+REACT_APP_BASE_URL="http://127.0.0.1:8080/api/v1"
+# NODE_ENV="development"
+DB_HOST="sql12.freemysqlhosting.net"
+DB_USER="sql12674573"
+DB_PASSWORD="PDJFS9sIIU"
+DB_NAME="sql12674573"
+DB_PORT='3306'
+DB_DIALECT="mysql"
+DB_TIMEZONE="+07:00"
+# SERVER
+SERVER_PORT="8000"

@@ -37,7 +37,7 @@
     "electron": "electron desktop/index.js",
     "app-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron desktop/index.js\"",
     "server-dev": "nodemon server/index.js",
-    "server": "node server/index.js"
+    "server": "@vercel/node server/index.js"
   },
   "eslintConfig": {
     "extends": [
