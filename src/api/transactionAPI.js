@@ -3,7 +3,7 @@ export default {
   getTransaction: async (page, limit, search) => {
     const params = `${limit || page || search ? `?limit=${limit}&page=${page}&search=${search}` : ''}`;
     try {
-      const response = await Axios.get(`http://localhost:8080/api/v1/transaction${params}`);
+      const response = await Axios.get(`${process.env.REACT_APP_BASE_URL}/transaction${params}`);
       return response.data;
     } catch (err) {
       throw (err)
@@ -11,7 +11,7 @@ export default {
   },
   createTransaction: async (data) => {
     try {
-      const response = await Axios.post(`http://localhost:8080/api/v1/transaction`, data);
+      const response = await Axios.post(`${process.env.REACT_APP_BASE_URL}/transaction`, data);
       return response.data;
     } catch (error) {
       throw error

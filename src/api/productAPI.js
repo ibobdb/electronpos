@@ -2,11 +2,6 @@
 import Axios from 'axios'
 export default {
   getProduct: async (page, limit, search = '') => {
-    // const config = {
-    //   headers: {
-    //     'Content-Type': 'application/json', // Contoh header Content-Type
-    //   },
-    // };
     try {
       const response = await Axios.get(`${process.env.REACT_APP_BASE_URL}/product?limit=${limit}&page=${page}&search=${search}`);
       return response.data;
@@ -16,7 +11,7 @@ export default {
   },
   deleteProduct: async (barcode) => {
     try {
-      const response = await Axios.delete(`http://localhost:8080/api/v1/product/${barcode}`)
+      const response = await Axios.delete(`${process.env.REACT_APP_BASE_URL}/product/${barcode}`)
       return response.data
     } catch (error) {
       throw (error)
@@ -29,7 +24,7 @@ export default {
       },
     };
     try {
-      const response = await Axios.post(`http://localhost:8080/api/v1/product`, data, config)
+      const response = await Axios.post(`${process.env.REACT_APP_BASE_URL}/product`, data, config)
       return response.data
     } catch (error) {
       throw (error)
@@ -37,7 +32,7 @@ export default {
   },
   getProductById: async (barcode) => {
     try {
-      const response = await Axios.get(`http://localhost:8080/api/v1/product/${barcode}`)
+      const response = await Axios.get(`${process.env.REACT_APP_BASE_URL}/product/${barcode}`)
       return response.data
     } catch (error) {
       throw (error)
@@ -45,7 +40,7 @@ export default {
   },
   updateProduct: async (barcode, data) => {
     try {
-      const response = await Axios.put(`http://localhost:8080/api/v1/product/${barcode}`, data)
+      const response = await Axios.put(`${process.env.REACT_APP_BASE_URL}/product/${barcode}`, data)
       return response.data
     } catch (error) {
       throw (error)

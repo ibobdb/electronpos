@@ -5,7 +5,7 @@ export default {
       // await Axios.get(`http://localhost:8080/api/v1/db-setting`).then(response => {
       //   return response.data
       // })
-      const response = await Axios.get(`http://localhost:8080/api/v1/db-setting`);
+      const response = await Axios.get(`${process.env.REACT_APP_BASE_URL}/db-setting`);
       return response.data
     } catch (error) {
       throw (error)
@@ -13,7 +13,7 @@ export default {
   },
   getConnection: async (query) => {
     try {
-      const response = await Axios.get(`http://localhost:8080/api/v1/db-setting/connection`, {
+      const response = await Axios.get(`${process.env.REACT_APP_BASE_URL}/db-setting/connection`, {
         params: query
       });
       return response.data
@@ -23,7 +23,7 @@ export default {
   },
   updateConfig: async (data) => {
     try {
-      const response = await Axios.post(`http://localhost:8080/api/v1/db-setting/update`, data);
+      const response = await Axios.post(`${process.env.REACT_APP_BASE_URL}/db-setting/update`, data);
       return response.data
     } catch (error) {
       throw (error)

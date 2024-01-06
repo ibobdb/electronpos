@@ -3,7 +3,7 @@ export default {
   getCategory: async (page, limit, search = '') => {
     const params = `${limit || page || search ? `?limit=${limit}&page=${page}&search=${search}` : ''}`;
     try {
-      const response = await Axios.get(`http://localhost:8080/api/v1/category${params}`);
+      const response = await Axios.get(`${process.env.REACT_APP_BASE_URL}/category${params}`);
       return response.data;
     } catch (err) {
       throw (err)
@@ -11,7 +11,7 @@ export default {
   },
   createCategory: async (data) => {
     try {
-      const response = await Axios.post(`http://localhost:8080/api/v1/category`, data);
+      const response = await Axios.post(`${process.env.REACT_APP_BASE_URL}/category`, data);
       return response.data;
     } catch (err) {
       throw (err)
@@ -19,7 +19,7 @@ export default {
   },
   deleteCategory: async (id) => {
     try {
-      const response = await Axios.delete(`http://localhost:8080/api/v1/category/${id}`)
+      const response = await Axios.delete(`${process.env.REACT_APP_BASE_URL}/category/${id}`)
       return response.data
     } catch (error) {
       throw (error)
