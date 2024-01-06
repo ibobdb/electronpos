@@ -8,7 +8,7 @@ export default {
     //   },
     // };
     try {
-      const response = await Axios.get(`http://localhost:8080/api/v1/product?limit=${limit}&page=${page}&search=${search}`);
+      const response = await Axios.get(`${process.env.REACT_APP_BASE_URL}/product?limit=${limit}&page=${page}&search=${search}`);
       return response.data;
     } catch (err) {
       throw (err)
